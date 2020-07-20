@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms Hello World</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<section class="header"></section>
+	<hr>
+	<form action="submission.html" method="POST">
+		<h1>Insert your personal data here</h1>
+		<p>Just like Facebook, we will make money out of your data, instead of you!</p>
+		<section class="personal"><h3>PERSONAL</h3></section>
+			<p>At first, we would like to gather some personal information</p>
+			<label for="name">Your Name</label> <br>
+			<input type="text" name="name" placeholder="Just like in your ID"> <br>
+			<label for="email">Your E-mail</label> <br>
+			<input type="email" name="email" placeholder="So we can spam you" required > <br>
+			<label for="dob">Your Date of Birth</label> <br>
+			<input type="date" name="dob" placeholder="DD/MM/AAAA">
+		<section class="location"><h3>GEOGRAPHICAL</h3></section>
+			<p>We would benefit a lot ($€£₿) of collecting data from where you are</p>
+			<label for="continent">Your Region</label> <br>
+			<input name="continent" list="continents" placeholder="Your continent">
+			<datalist id="continents">
+				<option value="Africa"></option>
+				<option value="Antarctica"></option>
+				<option value="Asia"></option>
+				<option value="Australia"></option>
+				<option value="Europe"></option>
+				<option value="North America"></option>
+				<option value="South America"></option>
+			</datalist> <br>
+			<label for="country">Your Country</label> <br>
+			<input type="text" name="country" placeholder="Quarantined or not?"> <br>
+			<label for="city">Your City</label> <br>
+			<input type="text" name="city" placeholder="Place you call home">
+		<section class="tc"><h3>TERMS AND CONDITIONS</h3>
+			<p>Do you agree to donate your data to us? We won't oblige you to participate in a real life human centipede</p>
+			<input type="radio" name="terms" value="yes">
+			<label for="terms">Yes</label>
+			<input type="radio" name="terms" value="no">
+			<label for="terms">No</label>
+		</section>
+		<section class="feedback"><h3>FEEDBACK</h3>
+			<label for="feedback">How honest do you think this form is?</label> <br>
+			<span>You guys suck</span>
+			<input type="range" name="feedback" min="0" max="10" placeholder="5">
+			<span>You guys rock</span>
+		</section>
+		<section class="send">
+			<label for="send"><h4>Ready to give us your goldmine?</h4></label>
+			<input type="submit" name="send" value="Send">
+		</section>
+	</form>
+</body>
+</html>

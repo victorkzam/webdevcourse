@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Forms Cheatsheet</title>
+        <link rel="stylesheet" href="./resources/css/style-legacy.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <section class="intro">
+            <div class="split left">
+                <h1><code>&lt;input&gt;</code> element</h1>
+            </div>
+            <div class="split right">
+                <p>The HTML <code>&lt;input&gt;</code> element is one of the most used form elements. It can be displayed in several ways depending on the type attribute that determines how it gets rendered to a page.<br><br>
+                Since there are so many different input attributes, this website covers the most important ones, and provides a list of all attributes that can be used.</p>
+            </div>
+        </section>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="#text_type">Input Type Text</a></li>
+                <li><a href="#password_type">Input Type Password</a></li>
+                <li><a href="#radio_type">Input Type Radio</a></li>
+                <li><a href="#checkbox_type">Input Type Checkbox</a></li>
+                <li><a href="#submit_type">Input Type Submit</a></li>
+                <li><a href="#attributes">Input Attributes</a></li>
+                <li><a href="#all_types">Input Types</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="main_types" id="text_type">
+                <h2>Input Type Text</h2>
+                <p><code>&lt;input type=“text”&gt;</code> defines a <strong>text input field</strong></p>
+                <!-- Code example -->
+                <div class="code_example" id="text_type">
+                    <code>
+                        &lt;form&gt;<br>
+                        &nbsp;&nbsp;&lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;label for="lname"&gt;Last name:&lt;/label&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="text" id="lname" name="lname"&gt;<br>
+                        &lt;/form&gt;<br>
+                    </code>
+                </div>
+            </section>
+            
+            <section class="main_types" id="password_type">
+                <h2>Input Type Password</h2>
+                <p><code>&lt;input type=“password”&gt;</code> defines a <strong>password field</strong></p>
+                <!-- Code example -->
+                <div class="code_example" id="password_type">
+                    <code>
+                        &lt;form&gt;<br>
+                        &nbsp;&nbsp;&lt;label for=&quot;username&quot;&gt;Username:&lt;/label&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot;&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;label for=&quot;pwd&quot;&gt;Password:&lt;/label&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot;&gt;<br>
+                        &lt;/form&gt;<br>
+                    </code>
+                </pre>
+            </section>
+            
+            <section class="main_types" id="radio_type">
+                <h2>Input Type Radio</h2>
+                <p>Radio buttons let a user select ONLY ONE of a limited number of choices.</p>
+                <p><code>&lt;input type=“radio”&gt;</code> defines a <strong>radio button</strong></p>
+                <!-- Code example -->
+                <div class="code_example" id="radio_type">
+                    <code>
+                        &lt;form&gt;<br>
+                        &nbsp;&nbsp;&lt;input type=&quot;radio&quot; id=&quot;male&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt;<br>
+                        &nbsp;&nbsp;&lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type=&quot;radio&quot; id=&quot;female&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt;<br>
+                        &nbsp;&nbsp;&lt;label for=&quot;female&quot;&gt;Female&lt;/label&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type=&quot;radio&quot; id=&quot;other&quot; name=&quot;gender&quot; value=&quot;other&quot;&gt;<br>
+                        &nbsp;&nbsp;&lt;label for=&quot;other&quot;&gt;Other&lt;/label&gt;<br>
+                        &lt;/form&gt;<br>
+                    </code>
+                </div>
+            </section>
+            
+            <section class="main_types" id="checkbox_type">
+                <h2>Input Type Checkbox</h2>
+                <p>Checkboxes let a user select ZERO or MORE options of a limited number of choices.</p>
+                <p><code>&lt;input type=“checkbox”&gt;</code> defines a <strong>checkbox</strong></p>
+                <!-- Code example -->
+                <div class="code_example" id="checkbox_type">
+                    <code>
+                        &lt;form&gt;<br>
+                        &nbsp;&nbsp;&lt;input type=&quot;checkbox&quot; id=&quot;vehicle1&quot; name=&quot;vehicle1&quot; value=&quot;Bike&quot;&gt;<br>
+                        &nbsp;&nbsp;&lt;label for=&quot;vehicle1&quot;&gt; I have a bike&lt;/label&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type=&quot;checkbox&quot; id=&quot;vehicle2&quot; name=&quot;vehicle2&quot; value=&quot;Car&quot;&gt;<br>
+                        &nbsp;&nbsp;&lt;label for=&quot;vehicle2&quot;&gt; I have a car&lt;/label&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type=&quot;checkbox&quot; id=&quot;vehicle3&quot; name=&quot;vehicle3&quot; value=&quot;Boat&quot;&gt;<br>
+                        &nbsp;&nbsp;&lt;label for=&quot;vehicle3&quot;&gt; I have a boat&lt;/label&gt;<br>
+                        &lt;/form&gt;<br>
+                    </code>
+                </div>
+            </section>
+            
+            <section class="main_types" id="submit_type">
+                <h2>Input Type Submit</h2>
+                <p>The form-handler is typically a server page with a script for processing input data.</p>
+                <p>The form-handler is specified in the form’s <code>action</code> attribute.</p>
+                <p><code>&lt;input type=&ldquo;submit&rdquo;&gt;</code> defines a button for <strong>submitting</strong> form data to a <strong>form-handler</strong></p>
+                <!-- Code example -->
+                <div class="code_example" id="submit_type">
+                    <code>
+                        &lt;form action=&quot;/action_page.php&quot;&gt;<br>
+                        &nbsp;&nbsp;&lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; value=&quot;John&quot;&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot; value=&quot;Doe&quot;&gt;&lt;br&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>
+                        &lt;/form&gt;<br>
+                    </code>
+                </div>
+            </section>
+        </main>
+        
+        <section class="attributes" id="attributes">
+            <h2>Input Attributes</h2>
+            <p>Attributes are meant to add value to each of the input types possible.</p>
+            <p>A common list of input restrictions is shown below:</p>
+            <table class="attributes" id="restrictions_table">
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td><code>checked</code></td>
+                        <td>Specifies that an input field should be pre-selected when the page loads (for checkbox or radio)</td>
+                    </tr>
+                    <tr>
+                        <td><code>disabled</code></td>
+                        <td>Specifies that an input field should be disabled</td>
+                    </tr>
+                    <tr>
+                        <td><code>max</code></td>
+                        <td>Specifies the maximum value for an input field</td>
+                    </tr>
+                    <tr>
+                        <td><code>maxlength</code></td>
+                        <td>Specifies the maximum number of character for an input field</td>
+                    </tr>
+                    <tr>
+                        <td><code>min</code></td>
+                        <td>Specifies the minimum value for an input field</td>
+                    </tr>
+                    <tr>
+                        <td><code>pattern</code></td>
+                        <td>Specifies a regular expression to check the input value against</td>
+                    </tr>
+                    <tr>
+                        <td><code>readonly</code></td>
+                        <td>Specifies that an input field is read only (cannot be changed)</td>
+                    </tr>
+                    <tr>
+                        <td><code>required</code></td>
+                        <td>Specifies that an input field is required (must be filled out)</td>
+                    </tr>
+                    <tr>
+                        <td><code>size</code></td>
+                        <td>Specifies the width (in characters) of an input field</td>
+                    </tr>
+                    <tr>
+                        <td><code>step</code></td>
+                        <td>Specifies the legal number intervals for an input field</td>
+                    </tr>
+                    <tr>
+                        <td><code>value</code></td>
+                        <td>Specifies the default value for an input field</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="all_types" id="all_types">
+            <h2>Input Types</h2>
+            <p>A list is included with all input types that can be used in HTML.</p>
+            <table class="all_types" id="types_table">
+                <tr>
+                    <td><code>&lt;input type=&quot;button&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;checkbox&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;color&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;date&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;datetime-local&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;email&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;file&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;hidden&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;image&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;month&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;number&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;password&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;radio&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;range&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;reset&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;search&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;submit&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;tel&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;text&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;time&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;url&quot;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type=&quot;week&quot;&gt;</code></td>
+                </tr>
+            </table>
+        </section>
+    </body>
+</html>
